@@ -1,11 +1,11 @@
 package com.example;
 
 /**
- * Hello world!
- *
+ * QuickSort partition implementations: Lomuto and Hoare
  */
 public class App {
-    // Lomuto Partition
+
+    // Lomuto: pivot = last element, returns final pivot index
     public static int lomutoPartition(int[] arr, int low, int high) {
         if (arr == null || arr.length == 0)
             return -1;
@@ -24,7 +24,7 @@ public class App {
         return i + 1;
     }
 
-    // Hoare Partition
+    // Hoare: pivot = first element, returns partition boundary index
     public static int hoarePartition(int[] arr, int low, int high) {
         if (arr == null || arr.length == 0)
             return -1;
@@ -49,6 +49,7 @@ public class App {
         }
     }
 
+    // swap two indices
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
